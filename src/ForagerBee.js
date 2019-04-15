@@ -6,9 +6,8 @@ var ForagerBee = function () {
   this.treasureChest = [];
 };
 
-var foragerBeeConstructor = ForagerBee.prototype.constructor;
 ForagerBee.prototype = Object.create(Bee.prototype);
-ForagerBee.prototype.constructor = foragerBeeConstructor
+ForagerBee.prototype.constructor = ForagerBee;
 
 ForagerBee.prototype.forage = function (foraged) {
   this.treasureChest.push(foraged);

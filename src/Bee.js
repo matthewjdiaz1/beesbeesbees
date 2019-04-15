@@ -6,11 +6,10 @@ var Bee = function () {
   this.job = 'keep on growing';
 };
 
-var beeConstructor = Bee.prototype.constructor;
 // set the subclasses prototype to Grubs prototype
-Bee.prototype = Object.create(Grub.prototype);
 // previous constructor was overwritten.  set it back to Bee
-Bee.prototype.constructor = beeConstructor;
+Bee.prototype = Object.create(Grub.prototype);
+Bee.prototype.constructor = Bee;
 
 
 // - You will typically want to instantiate when you see repeated 
